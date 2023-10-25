@@ -19,4 +19,11 @@ public class Cart {
     public List<Product> getProducts() {
         return products;
     }
+
+    public Order placeOrder(long orderId) {
+        Order order = new Order(orderId, this.products);
+        this.products.clear(); // clear the cart after placing the order
+        return order;
+    }
+
 }

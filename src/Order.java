@@ -21,7 +21,6 @@ public class Order {
     }
 
     public List<Product> getProducts() {
-        System.out.println(products);
         return products;
     }
 

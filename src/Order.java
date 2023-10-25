@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.List;
 
 public class Order {
@@ -7,8 +8,8 @@ public class Order {
 
     public Order(long orderId, List<Product> products) {
         this.orderId = orderId;
-        this.products = products;
-        this.status = "Pending"; // default status when an order is created
+        this.products = new LinkedList<>(products);
+        this.status = "Pending";
     }
 
     public long getOrderId() {
@@ -20,6 +21,7 @@ public class Order {
     }
 
     public List<Product> getProducts() {
+        System.out.println(products);
         return products;
     }
 

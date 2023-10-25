@@ -22,7 +22,7 @@ public class Cart {
 
     public Order placeOrder(long orderId) {
         Order order = new Order(orderId, this.products);
-        this.products.clear(); // clear the cart after placing the order
+        this.products.clear();
         return order;
     }
 

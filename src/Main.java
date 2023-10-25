@@ -4,7 +4,7 @@ public class Main {
     private static final Cart cart = new Cart();
     private static long currentProductId = 1;
     private static long currentOrderId = 1;
-    private static final Map<Long, Order> orders = new HashMap<>(); // store all orders
+    private static final Map<Long, Order> orders = new HashMap<>();
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -21,7 +21,7 @@ public class Main {
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -94,7 +94,7 @@ public class Main {
 
     private static void placeOrder() {
         Order order = cart.placeOrder(currentOrderId++);
-        orders.put(order.getOrderId(), order); // store the order in our orders map
+        orders.put(order.getOrderId(), order);
         System.out.println("Order placed successfully. Your order ID is: " + order.getOrderId());
     }
 
